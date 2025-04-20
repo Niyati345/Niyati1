@@ -35,8 +35,8 @@ jobs:
       env: 
           GCP_SECRET: ${{ secrets.GCP_KEY }}
       uses: 'google-github-actions/auth@v2'
-      with:
-          credentials_json: $GCP_SECRET
+      #with:
+          #credentials_json: $GCP_SECRET
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
