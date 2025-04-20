@@ -7,7 +7,7 @@ on:
       environment:
         description: 'Environment to run tests against'
         type: environment
-        required: false
+        required: true
 
 permissions:
   contents: read
@@ -42,5 +42,6 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
+    #destroy  
     - name: Terraform destroy
       run: terraform destroy -auto-approve  
